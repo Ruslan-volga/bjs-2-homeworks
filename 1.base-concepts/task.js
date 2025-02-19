@@ -1,6 +1,6 @@
 "use strict"
-function solveEquation(a, b, c) {
-  let discriminant = b * b - 4 * a * c;
+function solveEquation(a, b, c) {let arr = [];
+  let discriminant = b ** 2 - 4 * a * c;
     if (discriminant < 0) {
         return 'Уравнение не имеет реальных корней';
     } else if (discriminant === 0) {
@@ -10,7 +10,7 @@ function solveEquation(a, b, c) {
         let root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
         return 'Уравнение имеет два корня: ' + root1 + ' и ' + root2;
     }
-  let arr = [];
+  
   arr.push(root1, root2);
   return arr;
 }
