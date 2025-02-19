@@ -15,12 +15,13 @@ function solveEquation(a, b, c) {
   return arr;
 }
 
+
+"use strict";
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  
+  let percentageRate = parseFloat( percent / 100 / 12 );
+  let loanBody =amount - contribution;
+  let monthlyPayment = loanBody * (percentageRate + (percentageRate / ((1 + percentageRate)**countMonths - 1)));
+  let fullCount = monthlyPayment * countMonths;
+return fullCount.toFixed(2);
 }
-function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  let percentage = parseFloat( percent / 100 / 12 );
- let time = parseFloat( countMonths * 12 );
- let fullCount = (amount - contribution) * (percentage + (percentage / (((1 + percentage)**countMonths) - 1)))
- return fullCount.toFixed(2);
-}
+console.log (calculateTotalMortgage(10, 1000, 50000, 12));
