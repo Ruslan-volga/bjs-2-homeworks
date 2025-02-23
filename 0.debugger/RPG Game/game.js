@@ -1,4 +1,4 @@
-// Класс оружия
+ui// Класс оружия
 class Weapon {
 	constructor(name = 'weapon', attack = 3, durability = 3, range = 1) {
 		this.name = name;

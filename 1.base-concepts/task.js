@@ -1,22 +1,15 @@
 "use strict"
-function solveEquation(a, b, c) {
-  
-  let discriminant = b ** 2 - 4 * a * c;
-    if (discriminant < 0) {
-        return arr.splice(0);
-    } else if (discriminant === 0) {
-        return (-b / (2 * a));
-    } else {
-        let root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-        let root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-        return root1 + ', ' + root2;
-    }
-  
-    let arr = [];
-arr.push(parseFloat(solveEquation(a, b, c)));
-return arr;
+"use strict"
+function solveEquation(a,b,c){
+  let arr = [];
+  let discriminant = b**2 - 4 * a * c;
+  if (discriminant > 0){
+      arr =  [(- b + Math.sqrt(discriminant)) / (2 * a), (- b - Math.sqrt(discriminant)) / (2 * a)];
+  } else if (discriminant === 0) {
+      arr = [- b / (2 * a)];
+  }
+  return arr;
 }
-
 
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
