@@ -18,7 +18,8 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let monthlyPayment = loanBody * (percentageRate + (percentageRate / ((1 + percentageRate)**countMonths - 1)));
   let fullCount = parseFloat(monthlyPayment * countMonths);
 return fullCount.toFixed(2);
+return `\'${result}\'`
 }
 
-JSON.stringify(calculateTotalMortgage);
+
 
