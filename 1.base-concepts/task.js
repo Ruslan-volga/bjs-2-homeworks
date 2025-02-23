@@ -20,5 +20,5 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 return fullCount.toFixed(2);
 }
 
-typeof calculateTotalMortgage === "string";
+JSON.stringify(calculateTotalMortgage);
 
