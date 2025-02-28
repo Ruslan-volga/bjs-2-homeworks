@@ -40,14 +40,8 @@ function differenceMaxMinWorker (arr) {
   
   return  +(max - min).toFixed(2); 
 }
-function differenceEvenOddWorker(arr) { 
-  let odd = 0; 
-  let even = 0; 
-  for (let num of arr) { 
-      if (0 == num % 2) even += num; 
-      else odd += num; 
-  } 
-  return +(even - odd).toFixed(2)
+function differenceMaxMinWorker(...values) {
+  return Math.max(...values) - Math.min(...values);
 }
 
 function averageEvenElementsWorker(arr) { 
@@ -95,17 +89,8 @@ function differenceMaxMinWorker (arr) {
     }
   }
 }
-function differenceEvenOddWorker(arr) { 
-  let odd = 0; 
-  let even = 0; 
-  for (let num of arr) { 
-      if (0 == num % 2) {
-        even += num; 
-      } else {
-      odd += num; 
-  } 
-}
-  return +(even - odd).toFixed(2)
+function differenceMaxMinWorker(...arr) {
+  return Math.max(...arr) - Math.min(...arr);
 }
 
 function averageEvenElementsWorker(arr) { 
