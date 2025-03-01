@@ -64,9 +64,9 @@ function averageEvenElementsWorker(...arr) {
           sumEvenElement += arr[i]; 
           countEvenElement += 1; 
         }
-        if (isNaN(+parseFloat(sumEvenElement / countEvenElement))) (+parseFloat(sumEvenElement / countEvenElement)) = 0;
-  } 
-  return  +parseFloat(sumEvenElement / countEvenElement);
+        var result = +parseFloat(sumEvenElement / countEvenElement); 
+        if (isNaN(result)) result = 0;
+  return  result;
 }
 function makeWork(arrOfArr, func) {
   let maxWorkerResult = 0;
