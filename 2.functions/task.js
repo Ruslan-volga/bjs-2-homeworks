@@ -40,6 +40,9 @@ function summElementsWorker(...arr) {
 function differenceEvenOddWorker(...arr) { 
   let odd = 0; 
   let even = 0; for (let i = 0; i < arr.length; ++i) {
+    if (arr.length === 0) {
+      return 0;
+    } 
     if(0== arr[i] % 2) {
       even += arr[i];
     }else {odd += arr[i]; }
@@ -80,9 +83,7 @@ function makeWork(arrOfArr, func) {
 
   return maxWorkerResult; 
 }
-if (arr.length === 0) {
-  return 0;
-} 
+
 
 const arr = [[10, 10, 11, 20, 10], [67, 10, 2, 39, 88], [72, 75, 51, 87, 43], [30, 41, 55, 96, 62]];
 console.log(makeWork(arr, summElementsWorker)); // максимум из 61, 206, 328, 284 => 328
