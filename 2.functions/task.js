@@ -50,6 +50,7 @@ function differenceEvenOddWorker(...arr) {
 function differenceMaxMinWorker(...arr) {
   return +(Math.max(...arr) - Math.min(...arr)).toFixed(2);
 }
+differenceEvenOddWorker([]);
 
 function averageEvenElementsWorker(...arr) { 
   let sumEvenElement = 0; 
