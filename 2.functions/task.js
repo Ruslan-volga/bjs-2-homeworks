@@ -49,7 +49,7 @@ function differenceEvenOddWorker(...arr) {
 }
 function differenceMaxMinWorker(...arr) {
 
-  return +(Math.max(...arr) - Math.min(...arr)).toFixed(2);
+  return +parseFloat(Math.max(...arr) - Math.min(...arr)).toFixed(2);
 }
 
 
