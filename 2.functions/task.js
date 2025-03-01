@@ -1,5 +1,5 @@
 "use strict"
-function getArrayParams(arr) { 
+function getArrayParams(...arr) { 
   let min, max, sum, avg; 
   sum = 0; 
   min = Infinity;
