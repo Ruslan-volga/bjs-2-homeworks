@@ -58,18 +58,21 @@ function differenceMaxMinWorker(...arr) {
 }
 
 
-function averageEvenElementsWorker(...arr) { 
-  let sumEvenElement = 0; 
-  let countEvenElement = 0; 
-  for (let i = 0; i < arr.length; ++i) {
-    
-    if (0== arr[i] % 2)  { 
-          sumEvenElement += arr[i]; 
-          countEvenElement += 1; 
-        }
-        
-  return  +parseFloat(sumEvenElement / countEvenElement);
+function averageEvenElementsWorker(...arr) {
+  let sumEvenElement = 0;
+  let countEvenElement = 0;
+  let i;
+
+  if(arr.length === 0) return 0;
+
+  for(i = 0; i < arr.length; i++) {
+    if((arr[i] % 2) === 0) {
+      sumEvenElement += arr[i]; 
+      countEvenElement++;
+    }
   }
+
+  return sumEvenElement / countEvenElement;
 }
 function makeWork(arrOfArr, func) {
   let maxWorkerResult = 0;
