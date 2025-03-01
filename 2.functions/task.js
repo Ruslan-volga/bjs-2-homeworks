@@ -64,7 +64,7 @@ function averageEvenElementsWorker(...arr) {
           sumEvenElement += arr[i]; 
           countEvenElement += 1; 
         }
-        if (isNaN(+parseFloat(sumEvenElement / countEvenElement))) +parseFloat(sumEvenElement / countEvenElement) == 0;
+        if (isNaN(+parseFloat(sumEvenElement / countEvenElement))) (+parseFloat(sumEvenElement / countEvenElement)) = 0;
   } 
   return  +parseFloat(sumEvenElement / countEvenElement);
 }
