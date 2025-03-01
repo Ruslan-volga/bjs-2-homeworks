@@ -26,22 +26,9 @@ function summElementsWorker(arr) {
   return +sum.toFixed(2); 
 }
 
-function differenceMaxMinWorker (arr) { 
-  min = Infinity;
-  max = -Infinity;
-  
-  for (let i = 0; i < arr.length; ++i) {
-    if(arr[i]>max) {
-      max = arr[i];
-    }if(arr[i]<min) {
-      min = arr[i];
-    }
-  }
-  
-  return  +(max - min).toFixed(2); 
-}
-function differenceMaxMinWorker(...values) {
-  return Math.max(...values) - Math.min(...values);
+
+function differenceMaxMinWorker(...arr) {
+  return +(Math.max(...arr) - Math.min(...arr)).toFixed(2);
 }
 
 function averageEvenElementsWorker(arr) { 
@@ -77,20 +64,9 @@ function summElementsWorker(arr) {
   return +sum.toFixed(2); 
 }
 
-function differenceMaxMinWorker (arr) { 
-  min = Infinity;
-  max = -Infinity;
-  
-  for (let i = 0; i < arr.length; ++i) {
-    if(arr[i]>max) {
-      max = arr[i];
-    }if(arr[i]<min) {
-      min = arr[i];
-    }
-  }
-}
+
 function differenceMaxMinWorker(...arr) {
-  return Math.max(...arr) - Math.min(...arr);
+  return +(Math.max(...arr) - Math.min(...arr)).toFixed(2);
 }
 
 function averageEvenElementsWorker(arr) { 
