@@ -64,9 +64,9 @@ function averageEvenElementsWorker(...arr) {
           sumEvenElement += arr[i]; 
           countEvenElement += 1; 
         }
-        var result = +parseFloat(sumEvenElement / countEvenElement); 
-        if (isNaN(result)) result = 0;
-  return  result;
+        
+  return  +parseFloat(sumEvenElement / countEvenElement);
+  }
 }
 function makeWork(arrOfArr, func) {
   let maxWorkerResult = 0;
@@ -80,6 +80,9 @@ function makeWork(arrOfArr, func) {
 
   return maxWorkerResult; 
 }
+if (arr.length === 0) {
+  return 0;
+} 
 
 const arr = [[10, 10, 11, 20, 10], [67, 10, 2, 39, 88], [72, 75, 51, 87, 43], [30, 41, 55, 96, 62]];
 console.log(makeWork(arr, summElementsWorker)); // максимум из 61, 206, 328, 284 => 328
