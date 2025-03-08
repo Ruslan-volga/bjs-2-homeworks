@@ -20,7 +20,7 @@ Student.prototype.getAverage = function() {
     if (!this.marksToAdd || this.marksToAdd.length === 0) {
         return 0; 
     }
-    const sum = this.marksToAdd.reduce((acc, mark) => acc + mark, 0); 
+    const sum = this.marksToAdd.reduce((acc, value) => acc + value, 0); 
     return sum / this.marksToAdd.length; 
 }
 
