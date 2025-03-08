@@ -2,31 +2,32 @@ function Student(name, gender, age) {
     this.name = name;
     this.gender = gender;
     this.age = age;
-    this.marks = []; // Инициализация пустого массива для оценок
-}
-Student.prototype.setSubject = function(subjectName) {
-    this.subject = subjectName; // Установка предмета
+    this.arrMarks = []; 
 }
 
-Student.prototype.addMarks = function(...marksToAdd) {
-    if (!this.marks) {
-        return; // Если у студента нет массива оценок, выходим из функции
+Student.prototype.setSubject = function(subjectName) {
+    this.subject = subjectName; 
+}
+
+Student.prototype.addMarks = function(...marks) {
+    if (!this.arrMarks) {
+        return; 
     }
-    this.marks.push(...marksToAdd); // Добавление оценок в массив
+    this.arrMarks.push(...marks); 
 }
 
 Student.prototype.getAverage = function() {
-    if (!this.marks || this.marks.length === 0) {
-        return 0; // Если оценок нет, возвращаем 0
+    if (!this.arrMarks || this.arrMarks.length === 0) {
+        return 0; 
     }
-    const sum = this.marks.reduce((acc, mark) => acc + mark, 0); // Суммируем оценки
-    return sum / this.marks.length; // Возвращаем среднее арифметическое
+    const sum = this.arrMarks.reduce((acc, mark) => acc + mark, 0); 
+    return sum / this.arrMarks.length; 
 }
 
 Student.prototype.exclude = function(reason) {
-    delete this.subject; // Удаляем предмет
-    delete this.marks; // Удаляем оценки
-    this.excluded = reason; // Устанавливаем причину исключения
+    delete this.subject; 
+    delete this.arrMarks; 
+    this.excluded = reason; 
 }
 
 // Пример использования
