@@ -32,7 +32,7 @@ Student.prototype.exclude = function(reason) {
 let student1 = new Student("Василиса", "женский", 19);
 student1.setSubject("Алгебра");
 console.log(student1.getAverage());
-student1.addMarks(4, 5, 4, 5);
+student1.addMarks(5, 4, 4, 3, 3, 4, 5 );
 console.log(student1.getAverage()); 
 console.log(student1); 
 
