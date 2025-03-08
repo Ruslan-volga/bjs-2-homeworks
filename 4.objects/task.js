@@ -15,7 +15,6 @@ Student.prototype.addMarks = function(...marks) {
     }
     this.arrMarks.push(...marks); 
 }
-
 Student.prototype.getAverage = function() {
     if (!this.arrMarks || this.arrMarks.length === 0) {
         return 0; 
@@ -23,22 +22,21 @@ Student.prototype.getAverage = function() {
     const sum = this.arrMarks.reduce((acc, mark) => acc + mark, 0); 
     return sum / this.arrMarks.length; 
 }
-
 Student.prototype.exclude = function(reason) {
     delete this.subject; 
     delete this.arrMarks; 
     this.excluded = reason; 
 }
 
-// Пример использования
+
 let student1 = new Student("Василиса", "женский", 19);
 student1.setSubject("Алгебра");
-console.log(student1.getAverage()); // 0
+console.log(student1.getAverage());
 student1.addMarks(4, 5, 4, 5);
-console.log(student1.getAverage()); // 4.5
-console.log(student1); // {age: 19, gender: "женский", marks: [4, 5, 4, 5], name: "Василиса", subject: "Алгебра"}
+console.log(student1.getAverage()); 
+console.log(student1); 
 
 let student2 = new Student("Артем", "мужской", 25);
 student2.setSubject("Геометрия");
 student2.exclude('прогулы');
-console.log(student2); // {name: "Артем", gender: "мужской", age: 25, excluded: "плохая учеба"}
+console.log(student2); 
