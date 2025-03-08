@@ -36,10 +36,9 @@ student1.setSubject("Алгебра");
 console.log(student1.getAverage()); // 0
 student1.addMarks(4, 5, 4, 5);
 console.log(student1.getAverage()); // 4.5
-console.log(student1); // {age: 19, gender: "женский", Student.prototype.addmarksToAdd = function(...marksToAdd) {
-: [4, 5, 4, 5], name: "Василиса", subject: "Алгебра"}
+console.log(student1); 
 
 let student2 = new Student("Артем", "мужской", 25);
 student2.setSubject("Геометрия");
 student2.exclude('плохая учеба');
-console.log(student2); // {name: "Артем", gender: "мужской", age: 25, excluded: "плохая учеба"}
+console.log(student2); 
