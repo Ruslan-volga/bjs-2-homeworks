@@ -40,6 +40,6 @@ console.log(student1);
 // {age: 19, gender: "женский", marks: [4, 5, 4, 5], name: "Василиса", subject: "Algebra"}
 let student2 = new Student("Артём", "мужской", 25);
 student2.setSubject("Geometry");
-student2.exclude('плохая учёба');
+student2.exclude('прогулы');
 console.log(student2);
 // {name: "Артём", gender: "мужской", age: 25, excluded: "плохая учёба"}
