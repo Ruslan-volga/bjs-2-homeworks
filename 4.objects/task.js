@@ -31,7 +31,7 @@ Student.prototype.exclude = function(reason) {
 }
 
 
-let student1 = new Student("Василиса", "женский", 19);
+/*let student1 = new Student("Василиса", "женский", 19);
 student1.setSubject("Алгебра");
 console.log(student1.getAverage()); // 0
 student1.addMarks(4, 5, 4, 5);
@@ -41,4 +41,4 @@ console.log(student1);
 let student2 = new Student("Артем", "мужской", 25);
 student2.setSubject("Геометрия");
 student2.exclude('плохая учеба');
-console.log(student2); 
+console.log(student2); */
