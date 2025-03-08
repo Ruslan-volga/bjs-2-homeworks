@@ -1,3 +1,9 @@
+function Student(name, gender, age) {
+    this.name = name;
+    this.gender = gender;
+    this.age = age;
+    this.marks = []; // Инициализация пустого массива для оценок
+}
 Student.prototype.setSubject = function(subjectName) {
     this.subject = subjectName; // Установка предмета
 }
