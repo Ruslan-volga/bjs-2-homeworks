@@ -20,7 +20,7 @@ Student.prototype.addMarks = function (...marks) {
 
 Student.prototype.getAverage = function () {
     if(this.marks === undefined){
-        return 'Нет оценок';
+        return 0;
     } else {
         return this.marks.reduce( ( a, v ) => a + v, 0 ) / this.marks.length;
     }
