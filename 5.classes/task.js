@@ -73,7 +73,7 @@ class DetectiveBook extends Book {
 }
 
 
-/*const sherlock = new PrintEditionItem(
+const sherlock = new PrintEditionItem(
   "Полное собрание повестей и рассказов о Шерлоке Холмсе в одном томе",
   2019,
   1008
@@ -84,7 +84,7 @@ console.log(sherlock.state);
 sherlock.fix();
 console.log(sherlock.state); 
 
-const picknick = new FantasticBook(
+/*const picknick = new FantasticBook(
   "Аркадий и Борис Стругацкие",
   "Пикник на обочине",
   1972,
