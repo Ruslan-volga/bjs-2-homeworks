@@ -90,6 +90,13 @@ const picknick = new FantasticBook(
   168
 );
 
+const gladius = new PrintEditionItem(
+  "А. Сапковский",
+  "Меч Предназначения",
+  1992,
+  384
+);
+
 console.log(picknick.author); 
 picknick.state = 10;
 console.log(picknick.state); 
