@@ -1,4 +1,4 @@
-/*
+
 class PrintEditionItem {
   constructor(name, releaseDate, pagesCount) {
       this.name = name;
@@ -73,7 +73,7 @@ class DetectiveBook extends Book {
 }
 
 
-const sherlock = new PrintEditionItem(
+/*const sherlock = new PrintEditionItem(
   "Полное собрание повестей и рассказов о Шерлоке Холмсе в одном томе",
   2019,
   1008
@@ -121,7 +121,7 @@ console.log(gambler.author);
 gambler.state = 90;
 console.log(gambler.state); 
 gambler.fix();
-console.log(gambler.state);
+console.log(gambler.state);*/
 
 class Library {
   constructor(name) {
