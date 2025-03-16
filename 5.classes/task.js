@@ -1,21 +1,16 @@
-
 class PrintEditionItem {
   constructor(name, releaseDate, pagesCount) {
       this.name = name;
       this.releaseDate = releaseDate;
       this.pagesCount = pagesCount;
-      this._state = 100;
-      this.type = null;
+      this.state = 100; 
+      this.type = null; 
   }
 
-  
-  fix() {
-      if (this.state < 100) {
-          this.state = this.state * 1.5;;
-      }
+  get state() {
+      return this._state;
   }
 
-  
   set state(value) {
       if (value < 0) {
           this._state = 0;
@@ -26,9 +21,8 @@ class PrintEditionItem {
       }
   }
 
-  
-  get state() {
-      return this._state;
+  fix() {
+      this.state = Math.min(100, this.state * 1.5); 
   }
 }
 
@@ -36,39 +30,40 @@ class PrintEditionItem {
 class Magazine extends PrintEditionItem {
   constructor(name, releaseDate, pagesCount) {
       super(name, releaseDate, pagesCount);
-      this.type = "magazine"; 
+      this.type = 'magazine'; 
   }
 }
 
 
 class Book extends PrintEditionItem {
-  constructor(name, releaseDate, pagesCount, author) {
+  constructor(author, name, releaseDate, pagesCount) {
       super(name, releaseDate, pagesCount);
       this.author = author; 
-      this.type = "book"; 
+      this.type = 'book'; 
   }
 }
 
 
 class NovelBook extends Book {
   constructor(author, name, releaseDate, pagesCount) {
-      super(name, releaseDate, pagesCount, author);
-      this.type = "novel"; 
+      super(author, name, releaseDate, pagesCount);
+      this.type = 'novel'; 
   }
 }
 
 
 class FantasticBook extends Book {
   constructor(author, name, releaseDate, pagesCount) {
-      super(name, releaseDate, pagesCount, author);
-      this.type = "fantastic"; 
+      super(author, name, releaseDate, pagesCount);
+      this.type = 'fantastic'; 
   }
 }
 
+
 class DetectiveBook extends Book {
   constructor(author, name, releaseDate, pagesCount) {
-      super(name, releaseDate, pagesCount, author);
-      this.type = "detective"; 
+      super(author, name, releaseDate, pagesCount);
+      this.type = 'detective'; 
   }
 }
 
@@ -79,10 +74,7 @@ const sherlock = new PrintEditionItem(
   1008
 );
 
-console.log(sherlock.releaseDate); 
-console.log(sherlock.state); 
-sherlock.fix();
-console.log(sherlock.state); 
+
 
 const picknick = new FantasticBook(
   "Аркадий и Борис Стругацкие",
@@ -91,13 +83,7 @@ const picknick = new FantasticBook(
   168
 );
 
-console.log(picknick.author); 
-picknick.state = 10;
-console.log(picknick.state); 
-picknick.fix();
-console.log(picknick.state); 
-
-const book = new Book(384, "А. Сапковский", "Меч Предназначения", 1992, );
+const book = new Book("А. Сапковский","Меч Предназначения", 1992,384, );
 console.log(book.author); 
 book.state = 10;
 console.log(book.state); 
@@ -107,17 +93,16 @@ console.log(book.author);
 book.state = 10;
 console.log(book.state); 
 book.fix();
-console.log(book.state); 
+console.log(book.state); console.log(book.name);
 
 
-const gladius = new NovelBook('А. Сапковский', 'Меч Предназначения', 1992, 384);
+const gladius = new NovelBook( 'А. Сапковский','Меч Предназначения', 1992, 384);
 
 console.log(gladius.author); 
 gladius.state = 10;
 console.log(gladius.state); 
 gladius.fix();
-console.log(gladius.state); 
-
+console.log(gladius.state); console.log(gladius.name);
 
 
 
