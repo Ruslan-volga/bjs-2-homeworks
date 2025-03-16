@@ -96,15 +96,10 @@ console.log(picknick.state);
 picknick.fix();
 console.log(picknick.state); 
 
-const book = new Book('А. Сапковский', 'Меч Предназначения', 1992, 384);
+const book = new Book("А. Сапковский", "Меч Предназначения", 1992, 384);
 
 
-const gladius = new NovelBook(
-  "А. Сапковский",
-  "Меч Предназначения",  
-  1992,
-  384
-);
+const gladius = new NovelBook('А. Сапковский', 'Меч Предназначения', 1992, 384);
 
 console.log(gladius.author); 
 gladius.state = 10;
