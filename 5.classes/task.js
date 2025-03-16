@@ -173,4 +173,52 @@ damagedBook.fix();
 console.log(damagedBook.state); 
 
 library.addBook(damagedBook); 
-console.log("Количество книг после восстановления: " + library.books.length); 
+console.log("Количество книг после восстановления: " + library.books.length);
+
+// 3 задача
+class Student {
+  constructor(name) {
+      this.name = name; 
+      this.marks = {}; 
+  }
+
+  addMark(mark, subject) {
+      if (mark < 2 || mark > 5) {
+          return; 
+      }
+
+      if (!this.marks[subject]) {
+          this.marks[subject] = []; 
+      }
+
+      this.marks[subject].push(mark);
+  }
+
+  getAverageBySubject(subject) {
+      if (!this.marks[subject] || this.marks[subject].length === 0) {
+          return 0; 
+      }
+
+      const total = this.marks[subject].reduce((sum, mark) => sum + mark, 0); 
+      return total / this.marks[subject].length; 
+  }
+  getAverage() {
+      const subjects = Object.keys(this.marks);
+      if (subjects.length === 0) {
+          return 0; 
+      }
+
+      const totalAverage = subjects.reduce((sum, subject) => sum + this.getAverageBySubject(subject), 0);
+      return totalAverage / subjects.length; 
+  }
+}
+
+const student = new Student("Олег Никифоров");
+student.addMark(5, "химия");
+student.addMark(5, "химия");
+student.addMark(5, "физика");
+student.addMark(4, "физика");
+student.addMark(6, "физика"); 
+console.log(student.getAverageBySubject("физика")); 
+console.log(student.getAverageBySubject("биология")); 
+console.log(student.getAverage()); 
