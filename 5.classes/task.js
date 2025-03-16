@@ -91,8 +91,8 @@ const picknick = new FantasticBook(
 );
 
 const gladius = new PrintEditionItem(
-  "А. Сапковский",
-  "Меч Предназначения",
+  'А. Сапковский',
+  'Меч Предназначения',
   1992,
   384
 );
