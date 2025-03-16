@@ -1,3 +1,4 @@
+/*
 class PrintEditionItem {
   constructor(name, releaseDate, pagesCount) {
       this.name = name;
@@ -150,7 +151,7 @@ class Library {
   }
 }
 
-
+*/
 const library = new Library("Библиотека имени Ленина");
 
 library.addBook(new DetectiveBook("Артур Конан Дойл", "Полное собрание повестей и рассказов о Шерлоке Холмсе в одном томе", 2019, 1008));
