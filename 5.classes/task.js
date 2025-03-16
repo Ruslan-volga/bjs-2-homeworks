@@ -96,7 +96,7 @@ console.log(picknick.state);
 picknick.fix();
 console.log(picknick.state); 
 
-const mech = new Book('А. Сапковский', 'Меч Предназначения', 1992, 384);
+new Book('А. Сапковский', 'Меч Предназначения', 1992, 384, );
 
 
 const gladius = new NovelBook(
