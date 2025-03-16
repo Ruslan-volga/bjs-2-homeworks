@@ -4,7 +4,7 @@ class PrintEditionItem {
       this.releaseDate = releaseDate;
       this.pagesCount = pagesCount;
       this._state = 100;
-      this.type = '';
+      this.type = null;
   }
 
   
@@ -96,7 +96,7 @@ console.log(picknick.state);
 picknick.fix();
 console.log(picknick.state); 
 
-const book = new Book("А. Сапковский", "Меч Предназначения", 1992, 384, "book");
+const book = new Book(384, "А. Сапковский", "Меч Предназначения", 1992, 384, "book");
 
 
 const gladius = new NovelBook('А. Сапковский', 'Меч Предназначения', 1992, 384);
