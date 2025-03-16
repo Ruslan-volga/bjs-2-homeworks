@@ -125,7 +125,7 @@ console.log(gambler.state);
 gambler.fix();
 console.log(gambler.state);
 
-/*class Library {
+class Library {
   constructor(name) {
       this.name = name;
       this.books = []; 
