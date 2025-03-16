@@ -96,7 +96,7 @@ console.log(picknick.state);
 picknick.fix();
 console.log(picknick.state); 
 
-const gladius = new FantasticBook(
+const gladius = new DetectiveBook(
   'А. Сапковский',
   'Меч Предназначения',  
   1992,
