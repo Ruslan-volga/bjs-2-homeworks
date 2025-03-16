@@ -97,7 +97,17 @@ console.log(picknick.state);
 picknick.fix();
 console.log(picknick.state); 
 
-const book = new Book(384, "А. Сапковский", "Меч Предназначения", 1992, 384, "book");
+const book = new Book(384, "А. Сапковский", "Меч Предназначения", 1992, );
+console.log(book.author); 
+book.state = 10;
+console.log(book.state); 
+book.fix();
+console.log(book.state); 
+console.log(book.author); 
+book.state = 10;
+console.log(book.state); 
+book.fix();
+console.log(book.state); 
 
 
 const gladius = new NovelBook('А. Сапковский', 'Меч Предназначения', 1992, 384);
