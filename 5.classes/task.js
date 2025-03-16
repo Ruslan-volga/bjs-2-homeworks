@@ -97,8 +97,8 @@ picknick.fix();
 console.log(picknick.state); 
 
 const gladius = new NovelBook(
-  384, 'А. Сапковский',
-  'Меч Предназначения',  
+  "А. Сапковский",
+  "Меч Предназначения",  
   1992,
   384
   
