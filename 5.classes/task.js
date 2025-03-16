@@ -97,10 +97,10 @@ picknick.fix();
 console.log(picknick.state); 
 
 const gladius = new DetectiveBook(
-  'А. Сапковский',
+  384,'А. Сапковский'
   'Меч Предназначения',  
   1992,
- 384
+ 
   
 );
 
