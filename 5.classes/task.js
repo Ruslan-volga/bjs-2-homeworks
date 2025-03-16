@@ -91,7 +91,7 @@ const picknick = new FantasticBook(
 );
 
 const gladius = new PrintEditionItem(
-  384,'Меч Предназначения', 1992,'А. Сапковский'
+  'А. Сапковский', 384, 'Меч Предназначения', 1992
   
  
   
@@ -104,7 +104,13 @@ picknick.fix();
 console.log(picknick.state); 
 
 
-const gambler = new NovelBook("Фёдор Достоевский", "Игрок", 1866, 135);console.log(gambler.author); 
+const gambler = new NovelBook(
+  "Фёдор Достоевский", 
+  "Игрок", 
+  1866, 
+  135
+);
+console.log(gambler.author); 
 gambler.state = 90;
 console.log(gambler.state); 
 gambler.fix();
