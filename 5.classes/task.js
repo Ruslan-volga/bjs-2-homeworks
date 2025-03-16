@@ -90,18 +90,27 @@ const picknick = new FantasticBook(
   168
 );
 
-const gladius = new PrintEditionItem(
-  'А. Сапковский', 384, 'Меч Предназначения', 1992
-  
- 
-  
-);
-
 console.log(picknick.author); 
 picknick.state = 10;
 console.log(picknick.state); 
 picknick.fix();
 console.log(picknick.state); 
+
+const gladius = new FantasticBook(
+  'А. Сапковский',
+  'Меч Предназначения',  
+  1992,
+ 384
+  
+);
+
+console.log(gladius.author); 
+gladius.state = 10;
+console.log(gladius.state); 
+gladius.fix();
+console.log(gladius.state); 
+
+
 
 
 const gambler = new NovelBook(
