@@ -22,7 +22,7 @@ class PrintEditionItem {
   }
 
   fix() {
-      this.state = Math.min(100, this.state * 1.5); 
+      this.state =  this.state * 1.5; 
   }
 }
 
