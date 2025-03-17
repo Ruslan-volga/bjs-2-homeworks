@@ -35,7 +35,7 @@
 
         get area(){
           let p = this.perimeter / 2;
-          return Number(Math.SQRT2(p*(p - this.a)*(p - this.b)*(p - this.c)).toFixed(3));
+          return Number(Math.sqrt(p*(p - this.a)*(p - this.b)*(p - this.c)).toFixed(3));
         }
     }
 
