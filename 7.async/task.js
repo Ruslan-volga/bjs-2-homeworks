@@ -61,14 +61,3 @@ class AlarmClock {
     }
 }
 
-// Пример использования:
-const clock = new AlarmClock();
-
-clock.addClock("16:45", () => console.log('Звонок 1!'));
-clock.addClock("16:45", () => console.log('Звонок 2!'));
-clock.addClock("16:45", () => console.log('Звонок 3!'));
-
-console.log(clock.alarmCollection.length); // Должно быть 3
-
-clock.clearAlarms();
-console.log(clock.alarmCollection.length); // Должно быть 0
