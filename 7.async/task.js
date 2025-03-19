@@ -43,7 +43,7 @@ class AlarmClock {
                 if (alarm.time === currentTime && alarm.canCall) {
                     alarm.canCall = false;
                     alarm.callback();
-                    this.clearAlarms();
+                    
                 }
             });
         }, 1000);
