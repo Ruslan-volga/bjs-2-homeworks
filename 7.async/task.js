@@ -9,11 +9,7 @@ class AlarmClock {
             throw new Error('Отсутствуют обязательные аргументы');
         }
 
-        if (this.alarmCollection.some(alarm => alarm.time === time)) {
-            console.warn('Уже присутствует звонок на это же время');
-            return;
-        }
-
+        
         this.alarmCollection.push({
             time: time,
             callback: callback,
@@ -43,7 +39,6 @@ class AlarmClock {
                 if (alarm.time === currentTime && alarm.canCall) {
                     alarm.canCall = false;
                     alarm.callback();
-                    
                 }
             });
         }, 1000);
@@ -65,3 +60,15 @@ class AlarmClock {
         this.alarmCollection = [];
     }
 }
+
+// Пример использования:
+const clock = new AlarmClock();
+
+clock.addClock("16:45", () => console.log('Звонок 1!'));
+clock.addClock("16:45", () => console.log('Звонок 2!'));
+clock.addClock("16:45", () => console.log('Звонок 3!'));
+
+console.log(clock.alarmCollection.length); // Должно быть 3
+
+clock.clearAlarms();
+console.log(clock.alarmCollection.length); // Должно быть 0
